@@ -1,1 +1,15 @@
 /env
+api-gateway/__pycache__/
+api-gateway/controllers/__pycache__
+orders-service/__pycache__/
+orders-service/controllers/__pycache__/
+orders-service/models/__pycache__/
+orders-service/instance/
+auth-service/__pycache__/
+auth-service/controllers/__pycache__/
+auth-service/models/__pycache__/
+auth-service/instance/
+book-service/__pycache__/
+book-service/controllers/__pycache__/
+book-service/models/__pycache__/
+book-service/instance/
