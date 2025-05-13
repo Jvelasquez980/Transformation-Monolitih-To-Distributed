@@ -1,6 +1,7 @@
 /env
 api-gateway/__pycache__/
 api-gateway/controllers/__pycache__
+api-gateway/utils/__pycache__/
 orders-service/__pycache__/
 orders-service/controllers/__pycache__/
 orders-service/models/__pycache__/
