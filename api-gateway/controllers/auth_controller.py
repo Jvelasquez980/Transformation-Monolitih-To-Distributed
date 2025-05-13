@@ -10,7 +10,7 @@ def login_page():
     user = get_logged_user()
     if user:
         flash('Ya estás autenticado.')
-        return redirect(url_for('book.catalog'),current_user=user)
+        return redirect(url_for('book.catalog'))
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']

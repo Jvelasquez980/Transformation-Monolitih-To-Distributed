@@ -1,6 +1,7 @@
 from datetime import timedelta
 from flask import Flask, render_template
 from flask_jwt_extended import JWTManager
+from utils.auth_helpers import get_logged_user
 
 # Inicialización de la app
 app = Flask(__name__)
@@ -29,7 +30,8 @@ app.register_blueprint(admin)
 # Ruta principal
 @app.route('/')
 def home():
-    return render_template('home.html')
+    user = get_logged_user()    
+    return render_template('home.html', current_user=user)
 
 # Entry point
 if __name__ == '__main__':
