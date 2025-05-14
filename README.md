@@ -87,9 +87,10 @@ docker-compose up -d
 
 6. Configure Domain and NGINX
 ```bash
-(see /etc/nginx/sites-available/bookstore for full config)```
+(see /etc/nginx/sites-available/bookstore for full config)
+```
 8. Enable HTTPS
-
+```bash
 sudo certbot --nginx -d proyecto2telematica.online
 ```
 
