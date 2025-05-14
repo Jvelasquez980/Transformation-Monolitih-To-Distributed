@@ -1,4 +1,5 @@
 ## Link of the video: https://www.youtube.com/watch?v=Q9kYNOjhlbE
+
 # 📚 BookStore Monolithic Deployment
 
 This repository contains the deployment strategy of the **BookStore Monolithic Application** using Docker, Flask, NGINX, and AWS infrastructure. It documents two major deployment phases: the initial single-instance setup and the horizontally-scaled deployment using Auto Scaling Groups (ASG) and a dedicated MySQL instance.
