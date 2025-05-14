@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  orders-service:
+    build: .
+    ports:
+      - "5003:5003"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_ENV=production
