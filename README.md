@@ -104,9 +104,10 @@ ARCHITECHTURE:
 Removed internal MySQL from docker-compose.yml
 
 Modified app.py and config.py:
+```bash
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://admin:password@18.235.143.239:3306/bookstore'
-
+```
 🗄 MySQL EC2 Configuration
 
 1.Create EC2 Instance
