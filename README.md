@@ -88,6 +88,10 @@ docker-compose up -d
 5. Enable HTTPS
 sudo certbot --nginx -d proyecto2telematica.online
 
+ARCHITECHTURE:
+![image](https://github.com/user-attachments/assets/3beb53d2-e160-4e3f-acc2-ea202805672e)
+
+
 🔁 Objective 2 - Scaled Deployment
 <details> <summary>Click to expand</summary>
 🔄 Backend Changes
