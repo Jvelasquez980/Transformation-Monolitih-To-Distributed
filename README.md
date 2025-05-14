@@ -72,21 +72,21 @@ This repository contains the deployment strategy of the **BookStore Monolithic A
 
 1. **Create EC2 Instance**  
 2. **Install Dependencies**
-bash
+```bash
 sudo apt update
 sudo apt install -y docker.io docker-compose nginx certbot python3-certbot-nginx
 sudo systemctl enable docker
-sudo usermod -aG docker $USER
-
-3. Deploy App
+sudo usermod -aG docker $USER 
+```
+4. Deploy App```
 git clone https://github.com/<usuario>/bookstore-monolitica.git
 cd Transformation-Monolitih-To-Distributed
-docker-compose up -d
+docker-compose up -d ```
 
-4. Configure Domain and NGINX
-(see /etc/nginx/sites-available/bookstore for full config)
-5. Enable HTTPS
-sudo certbot --nginx -d proyecto2telematica.online
+5. Configure Domain and NGINX```
+(see /etc/nginx/sites-available/bookstore for full config)```
+6. Enable HTTPS```
+sudo certbot --nginx -d proyecto2telematica.online```
 
 ARCHITECHTURE:
 ![image](https://github.com/user-attachments/assets/3beb53d2-e160-4e3f-acc2-ea202805672e)
@@ -106,23 +106,24 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://admin:password@18.235.1
 1.Create EC2 Instance
 
 2.Install MySQL
-
+```
 sudo apt update
 sudo apt install -y mysql-server
+```
 
 3. Allow Remote Connections
-
+```
 sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 # Change bind-address to 0.0.0.0
 sudo systemctl restart mysql
-
+```
 4. Create DB and User
-
+```
 CREATE DATABASE bookstore;
 CREATE USER 'admin'@'%' IDENTIFIED BY 'TuClaveSegura';
 GRANT ALL PRIVILEGES ON bookstore.* TO 'admin'@'%';
 FLUSH PRIVILEGES;
-
+```
 ☁️ Auto Scaling Group (ASG)
 Launch Template: Created from the base EC2 instance image
 
@@ -149,8 +150,8 @@ Configured A record pointing to the Load Balancer
 
 NGINX updated to handle subdomain traffic
 
-SSL certificate:
-sudo certbot --nginx -d www.proyecto2telematica.online
+SSL certificate:```
+sudo certbot --nginx -d www.proyecto2telematica.online```
 
 ARCHITECHTURE: 
 ![image](https://github.com/user-attachments/assets/8b98a4d3-6d74-48c6-a2e9-defc6e12b299)
