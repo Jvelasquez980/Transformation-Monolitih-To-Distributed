@@ -148,3 +148,6 @@ NGINX updated to handle subdomain traffic
 SSL certificate:
 sudo certbot --nginx -d www.proyecto2telematica.online
 
+ARCHITECHTURE: 
+![image](https://github.com/user-attachments/assets/8b98a4d3-6d74-48c6-a2e9-defc6e12b299)
+
